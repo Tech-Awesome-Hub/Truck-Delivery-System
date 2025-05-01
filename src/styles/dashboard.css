@@ -1,0 +1,238 @@
+.dashboard-container {
+  background-color: #fff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: transparent;
+  color: #000;
+  padding: 0px;
+  border-radius: 0 0 0 15px;
+  /* box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.2); */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 200px;  /* Reduced width */
+  height: 100vh; /* Full height */
+  padding: 20px 0 20px 10px;
+}
+
+.sidebar h3 {
+  margin-bottom: 50px !important;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 80px;
+  overflow: hidden;
+  padding: 20px 10px 20px 10px;
+  transition: width 0.2s ease;
+}
+
+.sidebar.collapsed h3 {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-link {
+  text-align: center;
+  font-size: 1.0rem;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar.collapsed .sidebar-link span {
+  display: none; /* Hide text when collapsed */
+}
+
+.sidebar-link {
+  color: #000;
+  font-size: 1.0rem;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.sidebar-link:hover {
+  background-color: #000;
+  color: #ffffff;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.sidebar .nav-item {
+  margin-bottom: 10px;
+}
+
+.sidebar-link.active {
+  background-color: #000;
+  font-weight: 700;
+  transform: scale(1.1);
+}
+
+/* Card Styling */
+.card {
+  border-radius: 3px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-menu {
+  background: linear-gradient(135deg, #fff, #ffffff);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Sidebar Toggle Button */
+.sidebar .toggle-arrow:hover {
+  transform: rotate(180deg);
+}
+
+/* Main Dashboard Content Styling */
+.main-content {
+  padding: 20px 30px;
+}
+
+.db-cols {
+  padding-top: 15px;
+}
+
+.map-card {
+  background: transparent;
+  margin-bottom: 30px;
+  overflow: visible;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-placeholder {
+  font-size: 1.5rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Button Styling */
+.dbtn {
+  border-radius: 50px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.dbtn:hover {
+  background-color: #16a085;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+.analytics {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
+}
+
+.analytics p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* Table Styling */
+.table {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.table th, 
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.alert {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sidebar {
+      display: none;  /* Hide sidebar on medium screens and below */
+  }
+
+  .main-content {
+      padding: 10px;
+      width: 90%;
+      margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container {
+      height: 200px;
+  }
+
+  .trip-card,
+  .activity-card {
+      margin-bottom: 15px;
+  }
+
+  .card {
+      margin-bottom: 15px;
+  }
+}
+
+/* Sidebar Toggle Arrow - Positioned slightly outside */
+.toggle-arrow {
+  position: absolute;
+  top: 20px;
+  right: -20px; /* Moves icon slightly beyond the sidebar */
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, right 0.1s ease-in-out;
+}
+
+.sidebar.collapsed .toggle-arrow {
+  right: -10px;
+  top: 10px;
+  display: block !important;
+}
+
+/* Rotating the icon when collapsed */
+.toggle-arrow.rotated {
+  transform: rotate(180deg);
+  right: -25px; /* Adjust for visual balance when collapsed */
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+      height: calc(100vh - 50px); /* Set full height */
+      min-height: 600px; /* Increase minimum height */
+  }
+  .main-content {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

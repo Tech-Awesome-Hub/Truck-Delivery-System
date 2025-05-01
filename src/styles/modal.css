@@ -1,0 +1,184 @@
+/* Modal Styles */
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    animation: modalFadeIn 0.5s ease-in-out;
+  }
+  
+  .modal-header {
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .modal-footer {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .modal-footer button {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  button.close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Add a smooth fade-in transition effect for the modal */
+  @keyframes modalFadeIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Enhanced Close Button Styling */
+  .close {
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s ease;
+  }
+  
+  .close:hover {
+    color: #2980b9;
+  }
+  
+  /* Active Trip Button */
+  button.active-trip {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.active-trip:hover {
+    background-color: #3498db;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-menu {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  
+  .dropdown-item {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #2980b9;
+    color: white;
+  }
+
+  /* Darken the background during modal opening */
+.modal-backdrop {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .modal.show .modal-backdrop {
+    opacity: 0.8;
+  }
+  
+  /* Ensure smooth modal open/close transitions */
+  .modal.fade .modal-dialog {
+    transition: transform 0.5s ease-out, opacity 0.3s ease-out;
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  
+  .modal.fade.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+  }
+ 
+  /* Button Hover Styles */
+button:hover {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Transition on Modal Open/Close */
+  .modal-dialog {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .modal-dialog.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Light Shadows for Modals */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .modal-header {
+    background-color: #2980b9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+  }
+  
+  .modal-body {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .modal-footer {
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Smooth Button Transitions */
+  button {
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  

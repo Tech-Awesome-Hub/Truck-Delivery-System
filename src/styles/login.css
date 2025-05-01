@@ -1,0 +1,62 @@
+input:-webkit-autofill {
+  color: #333 !important; /* Set the desired text color */
+  background-color: #f4f4f4 !important; /* Set the background color if needed */
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Avoid flash of incorrect styling */
+  font-size: 16px !important;
+}
+
+input:-webkit-autofill:focus {
+  color: #333 !important; /* Ensure the text color is consistent even on focus */
+  background-color: #f4f4f4 !important;
+  font-size: 16px !important;
+}
+
+select {
+  font-size: 16px !important;
+}
+
+.sign-container {
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .signup-card {
+    max-width: 600px; /* Optional: you can define max-width to tighten form width */
+  }
+}
+
+.auth-container {
+  background-color: #eee;
+  /* background: 'linear-gradient(135deg, #a1a1a1 0%, #000000 100%)',  */
+}
+
+.signup-card {
+  /* max-width: 900px; */
+  max-height: 90vh;
+  margin: 0 auto;
+  overflow-y: scroll !important;
+  background-color: #eee;
+}
+
+.auth-card {
+  background-color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  
+  .signup-card {
+    /* box-shadow: none !important; */
+    width: 98% !important;
+    max-height: 96vh;
+    margin: auto !important;
+  }
+
+  .form-group > input, .form-group > select  {
+    width: 60%;
+  }
+
+  .auth-container {
+    background-color: #fff;
+  }
+  
+}

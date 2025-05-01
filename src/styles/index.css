@@ -1,0 +1,334 @@
+
+/* For mobile devices */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center; /* Center the nav items on mobile */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+
+  .video-container {
+    width: 90%;
+    height: 50%;
+    margin: auto;
+  }
+}
+
+/* Align Navbar items to the right for larger screens */
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin-left: auto;
+  }
+}
+
+.header {
+  min-height: 70px;
+  max-height: 80px;
+  position: sticky; /* Stick to the top of the page */
+  top: 0;           /* Distance from the top */
+  z-index: 1000;    /* Ensure it's above other elements */
+  color: white;
+  padding: 10px 20px;
+  justify-content: space-around;
+} 
+
+.header-content-container {
+  width: 90%;
+  height: inherit;
+  /* background-color: red !important; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body-content {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background-color: transparent;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* Hero Section */
+.hero {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 70vh; /* Default for larger screens */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  z-index: 1;
+}
+
+.hero .btn-lg {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .btn-lg:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  color: #000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero {
+      height: 60vh; /* Shorter height on mobile */
+  }
+
+  .hero h1 {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero p {
+      font-size: 1.2rem; /* Adjust text size for smaller screens */
+  }
+}
+
+.btn-lg {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-lg:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  color: #000;
+}
+
+/* Add a subtle animation to button */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.btn-lg {
+  animation: bounce 2s infinite;
+}
+
+/* Video background */
+.video-bg {
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  /* background-color: #28a745; */
+}
+
+/* Hero section overlay */
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 60vh;
+  color: white;
+}
+
+.about-box {
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Basic button styling */
+.learn-more-btn {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 1rem; /* Default font size */
+  padding: 12px 30px; /* Padding inside the button */
+  border: 2px solid #fff; /* White border */
+  border-radius: 25px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: 600; /* Bold text */
+  text-decoration: none; /* Remove underline for link-style buttons */
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+}
+
+/* Hover effect */
+.learn-more-btn:hover, .learn-more-btn:active {
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text */
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  border: none;
+}
+
+/* Focused state for accessibility */
+.learn-more-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7); /* Light outline on focus */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .learn-more-btn {
+    font-size: 0.9rem; /* Slightly smaller font size on mobile */
+    padding: 10px 25px; /* Adjust padding on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .learn-more-btn {
+    font-size: 0.8rem; /* Even smaller font size for very small screens */
+    padding: 8px 20px; /* Further reduced padding */
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, #000000, #a1a1a1);
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 576px) {
+  .about-box img {
+    max-width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Available Trucks */
+.find-truck {
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6e6 100%);
+  border-top: 2px solid #eee;
+}
+
+.find-truck-form {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.find-truck-input,
+.find-truck-date {
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.find-truck-input:focus,
+.find-truck-date:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+.find-truck-btn {
+  background-color: #343a40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.find-truck-btn:hover {
+  background-color: #212529;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #f8f9fa;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* About Section */
+.about {
+  background-color: #f8f9fa;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about h4 {
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Service section responsiveness */
+@media (max-width: 768px) {
+  .about h4 {
+      font-size: 1.2rem;
+  }
+
+  .about p {
+      font-size: 1rem;
+  }
+}
+
+/* Footer */
+footer a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
